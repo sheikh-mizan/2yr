@@ -11,7 +11,7 @@ document.querySelectorAll('.btn').forEach(btn => {
         // Open URL
         const url = this.getAttribute('data-url');
         if(url) {
-            window.open(url, "_blank"); // Opens in new tab
+            window.open(url, "_blank"); // Open in new tab
         }
     });
 });
