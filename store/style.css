@@ -1,43 +1,64 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: #f4f4f9;
-  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  background: #0f0f0f;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 14px 28px;
   font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
+  font-weight: bold;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  color: #fff;
 }
 
-.btn-primary { background: #5a67d8; color: #fff; }
-.btn-secondary { background: #ed64a6; color: #fff; }
-.btn-success { background: #48bb78; color: #fff; }
-.btn-warning { background: #f6ad55; color: #fff; }
-.btn-danger { background: #f56565; color: #fff; }
+/* Neon / Hacker Style Colors */
+.btn-primary {
+  background: linear-gradient(45deg, #1e3c72, #2a5298);
+  box-shadow: 0 0 15px #1e3c72, 0 0 30px #2a5298;
+}
+.btn-secondary {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  box-shadow: 0 0 15px #ff416c, 0 0 30px #ff4b2b;
+}
+.btn-success {
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+  box-shadow: 0 0 15px #11998e, 0 0 30px #38ef7d;
+}
+.btn-warning {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  box-shadow: 0 0 15px #f7971e, 0 0 30px #ffd200;
+}
+.btn-danger {
+  background: linear-gradient(45deg, #cb2d3e, #ef473a);
+  box-shadow: 0 0 15px #cb2d3e, 0 0 30px #ef473a;
+}
 
+/* Hover effect */
 .btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #fff, 0 0 50px #fff inset;
 }
 
+/* Ripple effect */
 .ripple {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
   animation: ripple 0.6s linear;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.4);
   pointer-events: none;
 }
 
